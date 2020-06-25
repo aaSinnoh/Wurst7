@@ -55,7 +55,7 @@ public final class SpeedHackHack extends Hack implements UpdateListener
 			return;
 		
 		Vec3d v = MC.player.getVelocity();
-		MC.player.setVelocity(v.x * 1.8, v.y + 0.1, v.z * 1.8);
+		MC.player.setVelocity(v.x * 4.0, v.y + 0.0, v.z * 4.0);
 		
 		v = MC.player.getVelocity();
 		double currentSpeed = Math.sqrt(Math.pow(v.x, 2) + Math.pow(v.z, 2));
@@ -63,7 +63,7 @@ public final class SpeedHackHack extends Hack implements UpdateListener
 		// limit speed to highest value that works on NoCheat+ version
 		// 3.13.0-BETA-sMD5NET-b878
 		// UPDATE: Patched in NoCheat+ version 3.13.2-SNAPSHOT-sMD5NET-b888
-		double maxSpeed = 0.66F;
+		double maxSpeed = 5.0FF;
 		
 		if(currentSpeed > maxSpeed)
 			MC.player.setVelocity(v.x / currentSpeed * maxSpeed, v.y,
